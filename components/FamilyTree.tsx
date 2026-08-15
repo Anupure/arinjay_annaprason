@@ -3,13 +3,13 @@ import styles from './FamilyTree.module.css';
 // Import family member images (if available)
 import momImg from '../images/family/mom.png';
 import paternalUncleImg from '../images/family/paternal_uncle.jpg';
-import maternalUncleImg from '../images/family/maternal_uncle.png';
+import maternalUncleImg from '../images/family/maternal_uncle.jpg';
 import paternalGrandfatherImg from '../images/family/paternal_grandfather.jpg';
 import paternalGrandmotherImg from '../images/family/paternal_grandmother.jpg';
 import maternalGrandfatherImg from '../images/family/maternal_grandfather.jpg';
 import maternalGrandmotherImg from '../images/family/maternal_grandmother.jpg';
 import paternalGreatGrandfatherImg from '../images/family/paternal_great_grandfather.jpg';
-import babyImg from '../images/family/me.png';
+import babyImg from '../images/family/me.jpg';
 import { StaticImageData } from 'next/image';
 
 // Map member IDs to their corresponding image imports (use actual IDs from the members array)
