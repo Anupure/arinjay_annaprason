@@ -29,6 +29,30 @@ export default function WanderingAnimals() {
     []
   );
 
+  // Responsive sizes based on viewport width
+  const getResponsiveSize = (baseSize: number) => {
+    if (typeof window === 'undefined') return baseSize;
+    const vw = window.innerWidth;
+    if (vw <= 480) return Math.round(baseSize * 0.55);
+    if (vw <= 768) return Math.round(baseSize * 0.75);
+    return baseSize;
+  };
+
+  const [responsiveSizes, setResponsiveSizes] = useState<Record<string, number>>({});
+
+  useEffect(() => {
+    const updateSizes = () => {
+      const sizes: Record<string, number> = {};
+      animals.forEach(a => {
+        sizes[a.id] = getResponsiveSize(a.size);
+      });
+      setResponsiveSizes(sizes);
+    };
+    updateSizes();
+    window.addEventListener('resize', updateSizes);
+    return () => window.removeEventListener('resize', updateSizes);
+  }, [animals]);
+
   const [ready, setReady] = useState(false);
   const [activeId, setActiveId] = useState<string | null>(null);
   const [draggingId, setDraggingId] = useState<string | null>(null);
@@ -184,8 +208,8 @@ export default function WanderingAnimals() {
               }}
               className={`${styles.animal} ${activeId === a.id ? styles.popped : ''} ${draggingId === a.id ? styles.dragging : ''}`}
               style={{
-                width: a.size,
-                height: a.size,
+                width: responsiveSizes[a.id] || a.size,
+                height: responsiveSizes[a.id] || a.size,
                 left: `${pos.x}%`,
                 top: `${pos.y}%`,
                 opacity: ready ? 1 : 0,
@@ -207,8 +231,8 @@ export default function WanderingAnimals() {
               <Image
                 src={a.src}
                 alt=""
-                width={a.size}
-                height={a.size}
+                width={responsiveSizes[a.id] || a.size}
+                height={responsiveSizes[a.id] || a.size}
                 className={a.className}
                 draggable={false}
               />

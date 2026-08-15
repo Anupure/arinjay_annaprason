@@ -124,12 +124,8 @@
   50% { transform: translateY(-8px) rotate(1.5deg); }
 }
 
-/* Hide on very small screens to avoid clutter */
+/* Responsive animal and balloon sizes */
 @media (max-width: 480px) {
-  .layer {
-    display: none;
-  }
-
   /* Reduce balloon size further on small screens */
   .balloon img {
     width: 140px !important;
