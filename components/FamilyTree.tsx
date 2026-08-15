@@ -211,6 +211,27 @@ export default function FamilyTree({ language }: FamilyTreeProps) {
     );
   };
 
+  const renderBaby = () => {
+    const imgData = imageMap[baby.id];
+    return (
+      <div className={`${styles.memberCard} ${styles.babyCard}`}>
+        <div className={styles.avatar}>
+          {imgData ? (
+            <img src={imgData.src} alt={baby.nameEn} className={styles.avatarImg} />
+          ) : (
+            <span className={styles.avatarEmoji}>{baby.emoji}</span>
+          )}
+        </div>
+        <span className={styles.relation}>
+          {language === 'en' ? baby.relationEn : baby.relationBn}
+        </span>
+        <span className={styles.name}>
+          {language === 'en' ? baby.nameEn : baby.nameBn}
+        </span>
+      </div>
+    );
+  };
+
   const genLabel = (gen: number) => {
     switch (gen) {
       case 3:
@@ -244,17 +265,7 @@ export default function FamilyTree({ language }: FamilyTreeProps) {
             <div key={gen} className={styles.generationRow}>
               {gen === 0 ? (
                 <div className={styles.babyRow}>
-                  <div className={`${styles.memberCard} ${styles.babyCard}`}>
-                    <div className={styles.avatar}>
-                        <img src={babyImg.src} alt={baby.nameEn} className={styles.avatarImg} />
-                    </div>
-                    <span className={styles.relation}>
-                      {language === 'en' ? baby.relationEn : baby.relationBn}
-                    </span>
-                    <span className={styles.name}>
-                      {language === 'en' ? baby.nameEn : baby.nameBn}
-                    </span>
-                  </div>
+                  {renderBaby()}
                 </div>
               ) : (
                 <>
