@@ -129,4 +129,18 @@
   .layer {
     display: none;
   }
+
+  /* Reduce balloon size further on small screens */
+  .balloon img {
+    width: 140px !important;
+    height: auto !important;
+  }
+}
+
+/* Medium screens — slightly smaller balloons */
+@media (max-width: 768px) {
+  .balloon img {
+    width: 180px !important;
+    height: auto !important;
+  }
 }

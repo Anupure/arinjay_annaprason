@@ -233,7 +233,7 @@ export default function WanderingAnimals() {
           }}
           aria-label="Balloon"
         >
-          <Image src={balloonImg} alt="" width={400} height={480} draggable={false} />
+          <Image src={balloonImg} alt="" width={220} height={264} draggable={false} />
         </div>
         <div
           className={`${styles.balloon} ${activeId === 'balloon-right' ? styles.popped : ''}`}
@@ -249,7 +249,7 @@ export default function WanderingAnimals() {
           }}
           aria-label="Balloon"
         >
-          <Image src={balloonImg} alt="" width={400} height={480} draggable={false} />
+          <Image src={balloonImg} alt="" width={220} height={264} draggable={false} />
         </div>
       </div>
     </>
