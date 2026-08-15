@@ -9,6 +9,9 @@ import babyFingerUp from '../images/baby/finger_up.png';
 import babyLook from '../images/baby/look.png';
 import babySophisticated from '../images/baby/sophesticated.png';
 import balloonImg from '../images/baby/balloon.png';
+import babyContemplating from '../images/baby/baby_contemplating.png';
+import babySmiling from '../images/baby/baby_smiling.png'
+import babySmall from '../images/baby/baby_small.png'
 
 /**
  * Decorative layer of animal mascots that wander around the page
@@ -25,6 +28,9 @@ export default function WanderingAnimals() {
       { id: 'baby-finger', src: babyFingerUp, alt: '', size: 160, className: styles.baby },
       { id: 'baby-look', src: babyLook, alt: '', size: 160, className: styles.baby },
       { id: 'baby-sophisticated', src: babySophisticated, alt: '', size: 160, className: styles.baby },
+      { id: 'baby-smiling', src: babySmiling, alt: '', size: 160, className: styles.baby },
+      { id: 'baby-small', src: babySmall, alt: '', size: 160, className: styles.baby },
+      { id: 'baby-contemplating', src: babyContemplating, alt: '', size: 160, className: styles.baby },
     ],
     []
   );

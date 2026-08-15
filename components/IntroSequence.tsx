@@ -6,8 +6,9 @@ import gsap from 'gsap';
 import styles from './IntroSequence.module.css';
 
 import babyFingerUp from '../images/baby/finger_up.png';
-import babyLook from '../images/baby/look.png';
+import babySmall from '../images/baby/baby_small.png';
 import babySophisticated from '../images/baby/sophesticated.png';
+import babySmiling from '../images/baby/baby_smiling.png';
 import balloonImg from '../images/baby/balloon.png';
 
 interface IntroSequenceProps {
@@ -317,9 +318,9 @@ export default function IntroSequence({
       <div ref={babyLayerRef} className={styles.babyLayer} aria-hidden="true">
         {[
           { src: babyFingerUp, left: 12, top: 18, size: 90, delay: 0 },
-          { src: babyLook, left: 78, top: 22, size: 84, delay: 0.3 },
+          { src: babySmall, left: 78, top: 22, size: 84, delay: 0.3 },
           { src: babySophisticated, left: 20, top: 68, size: 96, delay: 0.6 },
-          { src: babyFingerUp, left: 74, top: 66, size: 80, delay: 0.9 },
+          { src: babySmiling, left: 74, top: 66, size: 80, delay: 0.9 },
         ].map((b, i) => (
           <div
             key={i}
