@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './FamilyTree.module.css';
 // Import family member images (if available)
-import momImg from '../images/family/mom.png';
+import momImg from '../images/family/mom.jpg';
 import paternalUncleImg from '../images/family/paternal_uncle.jpg';
 import maternalUncleImg from '../images/family/maternal_uncle.jpg';
 import paternalGrandfatherImg from '../images/family/paternal_grandfather.jpg';
