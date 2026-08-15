@@ -150,8 +150,8 @@
 }
 
 .avatar {
-  width: 150px;
-  height: 150px;
+  width: 130px;
+  height: 130px;
   border-radius: 50%;
   background: linear-gradient(135deg, #FFF3D6 0%, #FFE0B2 100%);
   border: 2px solid rgba(218, 165, 32, 0.5);
