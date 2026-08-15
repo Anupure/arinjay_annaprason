@@ -1,0 +1,305 @@
+.guestPlanner {
+  padding: 4rem 20px;
+  background: linear-gradient(180deg, #FFE8D6 0%, #FFF8F3 100%);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.header h2 {
+  font-size: 2.8rem;
+  color: #8B4513;
+  margin: 0 0 0.5rem;
+}
+
+.subtitle {
+  color: #5C2E0F;
+  font-size: 1rem;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1.5fr 0.9fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.gamePanel,
+.infoCard {
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(255, 215, 0, 0.15);
+  border-radius: 22px;
+  box-shadow: 0 10px 30px rgba(139, 69, 19, 0.08);
+}
+
+.gamePanel {
+  padding: 1.5rem;
+}
+
+.gameInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.scoreBox {
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(135deg, rgba(255, 215, 0, 0.12), rgba(218, 165, 32, 0.08));
+  border: 1px solid rgba(218, 165, 32, 0.2);
+  border-radius: 14px;
+  padding: 0.75rem 1rem;
+  min-width: 110px;
+}
+
+.scoreBox span {
+  color: #5C2E0F;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.scoreBox strong {
+  color: #8B4513;
+  font-size: 1.4rem;
+  margin-top: 0.15rem;
+}
+
+.pairsBox {
+  display: flex;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(139, 69, 19, 0.15);
+  border-radius: 14px;
+  padding: 0.75rem 1rem;
+  min-width: 100px;
+}
+
+.pairsBox span {
+  color: #5C2E0F;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.pairsBox strong {
+  color: #8B4513;
+  font-size: 1.2rem;
+  margin-top: 0.15rem;
+}
+
+.resetBtn {
+  border: none;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #8B4513 0%, #5C2E0F 100%);
+  color: #fff;
+  padding: 0.8rem 1.2rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.resetBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px rgba(139, 69, 19, 0.22);
+}
+
+.memoryBoard {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.8rem;
+}
+
+.memoryCard {
+  position: relative;
+  aspect-ratio: 1;
+  border: none;
+  border-radius: 16px;
+  background: linear-gradient(135deg, rgba(255, 215, 0, 0.2), rgba(218, 165, 32, 0.12));
+  cursor: pointer;
+  perspective: 800px;
+  transition: transform 0.2s ease;
+  font: inherit;
+}
+
+.memoryCard:hover {
+  transform: translateY(-2px);
+}
+
+.memoryFront,
+.memoryBack {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+  backface-visibility: hidden;
+  transition: transform 0.5s ease, opacity 0.3s ease;
+}
+
+.memoryFront {
+  background: linear-gradient(135deg, #8B4513, #5C2E0F);
+  color: #fff;
+  font-size: 2.2rem;
+  font-weight: 800;
+}
+
+.memoryBack {
+  transform: rotateY(180deg);
+  background: linear-gradient(135deg, #fffaf3, #ffe9c8);
+  font-size: 2.2rem;
+}
+
+.memoryLabel {
+  position: absolute;
+  bottom: 0.45rem;
+  left: 0.45rem;
+  right: 0.45rem;
+  text-align: center;
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: #5C2E0F;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 999px;
+  padding: 0.2rem 0.3rem;
+}
+
+.memoryCard.flipped .memoryFront,
+.memoryCard.matched .memoryFront {
+  transform: rotateY(180deg);
+}
+
+.memoryCard.flipped .memoryBack,
+.memoryCard.matched .memoryBack {
+  transform: rotateY(0deg);
+}
+
+.memoryCard.matched {
+  box-shadow: 0 0 0 3px rgba(255, 215, 0, 0.4);
+}
+
+.sidePanel {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.infoCard {
+  padding: 1.25rem 1.25rem 1rem;
+}
+
+.infoCard h3 {
+  color: #8B4513;
+  margin: 0 0 0.9rem;
+  font-size: 1.2rem;
+}
+
+.infoCard ul {
+  margin: 0;
+  padding-left: 1.1rem;
+  color: #5C2E0F;
+  line-height: 1.8;
+}
+
+.infoCard p {
+  margin: 0;
+  color: #5C2E0F;
+  line-height: 1.7;
+}
+
+.winBanner {
+  background: linear-gradient(135deg, rgba(255, 215, 0, 0.18), rgba(218, 165, 32, 0.1));
+  border: 1px solid rgba(218, 165, 32, 0.25);
+  color: #5C2E0F;
+  border-radius: 14px;
+  padding: 1rem;
+  font-size: 1rem;
+  text-align: center;
+  animation: winPop 0.6s ease-out;
+}
+
+@keyframes winPop {
+  0% { transform: scale(0.6); opacity: 0; }
+  70% { transform: scale(1.08); }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+/* Confetti cannon — pieces radiate outward from screen center */
+.confettiOverlay {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 5000;
+  overflow: hidden;
+}
+
+.confettiPiece {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  border-radius: 2px;
+  opacity: 0;
+  animation-name: confettiBurst;
+  animation-timing-function: cubic-bezier(0.15, 0.8, 0.35, 1);
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  transform-origin: center;
+}
+
+@keyframes confettiBurst {
+  0% {
+    transform: translate(0, 0) rotate(0deg) scale(1);
+    opacity: 0;
+  }
+  8% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(var(--x), var(--y)) rotate(var(--spin, 720deg)) scale(0.7);
+    opacity: 0.4;
+  }
+}
+
+@media (max-width: 900px) {
+  .content {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .guestPlanner {
+    padding: 2.5rem 15px;
+  }
+
+  .header h2 {
+    font-size: 2.1rem;
+  }
+
+  .gameInfo {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .memoryBoard {
+    grid-template-columns: repeat(4, minmax(56px, 1fr));
+    gap: 0.7rem;
+  }
+
+  .memoryCard {
+    min-height: 76px;
+  }
+}

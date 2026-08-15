@@ -1,0 +1,132 @@
+.layer {
+  position: fixed;
+  inset: 0;
+  z-index: 20; /* above content, below header (1000) and favorites (50+) */
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.animal {
+  position: absolute;
+  transition:
+    left 8s ease-in-out,
+    top 8s ease-in-out,
+    opacity 1.2s ease,
+    transform 0.3s ease,
+    filter 0.3s ease;
+  filter: drop-shadow(0 6px 12px rgba(139, 69, 19, 0.18));
+  will-change: left, top;
+  pointer-events: auto; /* animals are clickable (layer stays transparent) */
+  cursor: grab;
+  touch-action: none; /* allow touch dragging without page scroll */
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.animal.dragging {
+  cursor: grabbing;
+  transition: none; /* follow the pointer instantly while dragging */
+  z-index: 40;
+  filter: drop-shadow(0 10px 20px rgba(139, 69, 19, 0.35));
+}
+
+.animal.popped {
+  transform: scale(1.18);
+  filter: drop-shadow(0 0 22px rgba(255, 215, 0, 0.85));
+  z-index: 30;
+}
+
+.animal:focus-visible {
+  outline: 2px solid rgba(255, 215, 0, 0.8);
+  outline-offset: 3px;
+  border-radius: 50%;
+}
+
+.rat {
+  animation: ratBob 5s ease-in-out infinite;
+}
+
+.tiger {
+  animation: tigerStroll 7s ease-in-out infinite;
+}
+
+.elephant1 {
+  animation: elephantSway 6s ease-in-out infinite;
+}
+
+.elephant2 {
+  animation: elephantSway 7.5s ease-in-out infinite reverse;
+}
+
+.baby {
+  border-radius: 50%;
+  border: 3px solid rgba(255, 51, 204, 0.55);
+  box-shadow: 0 8px 20px rgba(139, 69, 19, 0.22);
+  animation: babyFloat 6s ease-in-out infinite;
+  object-fit: cover;
+}
+
+@keyframes babyFloat {
+  0%, 100% { transform: translateY(0) rotate(-2deg); }
+  50% { transform: translateY(-12px) rotate(2deg); }
+}
+
+@keyframes ratBob {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-10px) scale(1.03); }
+}
+
+@keyframes tigerStroll {
+  0%, 100% { transform: translateY(0) rotate(-2deg); }
+  50% { transform: translateY(-14px) rotate(3deg); }
+}
+
+@keyframes elephantSway {
+  0%, 100% { transform: translateX(0) rotate(0deg); }
+  25% { transform: translateX(6px) rotate(2deg); }
+  75% { transform: translateX(-6px) rotate(-2deg); }
+}
+
+.balloonWrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 0;
+  pointer-events: none; /* container doesn't capture, children opt in */
+  z-index: 18; /* below the wandering layer (20) but still above content */
+}
+
+.balloon {
+  position: absolute;
+  pointer-events: auto; /* balloons are clickable */
+  cursor: pointer;
+  opacity: 0.5; /* reduced so it doesn't hurt text readability */
+  animation: balloonFloat 5s ease-in-out infinite;
+  filter: drop-shadow(0 4px 10px rgba(139, 69, 19, 0.15));
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.balloon.popped {
+  transform: scale(1.12);
+  filter: drop-shadow(0 0 24px rgba(255, 215, 0, 0.9));
+  opacity: 0.75;
+  z-index: 30;
+}
+
+.balloon:focus-visible {
+  outline: 2px solid rgba(255, 215, 0, 0.8);
+  outline-offset: 3px;
+}
+
+@keyframes balloonFloat {
+  0%, 100% { transform: translateY(0) rotate(-1.5deg); }
+  50% { transform: translateY(-8px) rotate(1.5deg); }
+}
+
+/* Hide on very small screens to avoid clutter */
+@media (max-width: 480px) {
+  .layer {
+    display: none;
+  }
+}

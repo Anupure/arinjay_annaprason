@@ -1,0 +1,142 @@
+.wrapper {
+  position: fixed;
+  bottom: 24px;
+  left: 30px;
+  z-index: 3000; /* above everything except the intro (1000) — always clickable */
+}
+
+.toggle {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 215, 0, 0.6);
+  background: linear-gradient(135deg, #8B4513 0%, #5C2E0F 100%);
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 6px 24px rgba(139, 69, 19, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.toggle:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 30px rgba(139, 69, 19, 0.55);
+}
+
+.toggleIcon {
+  font-family: 'Playfair Display', serif;
+  line-height: 1;
+}
+
+.panel {
+  position: absolute;
+  bottom: 64px;
+  left: 0;
+  width: 280px;
+  background: rgba(255, 255, 255, 0.97);
+  border: 1px solid rgba(139, 69, 19, 0.15);
+  border-radius: 16px;
+  box-shadow: 0 16px 44px rgba(139, 69, 19, 0.22);
+  padding: 1rem;
+  animation: panelIn 0.25s ease-out;
+}
+
+@keyframes panelIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.panelHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #8B4513;
+  margin-bottom: 0.8rem;
+}
+
+.closeBtn {
+  background: none;
+  border: none;
+  font-size: 1rem;
+  color: #5C2E0F;
+  cursor: pointer;
+  padding: 2px 6px;
+  border-radius: 6px;
+}
+
+.closeBtn:hover {
+  background: rgba(139, 69, 19, 0.08);
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.option {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.15rem;
+  width: 100%;
+  text-align: left;
+  background: rgba(139, 69, 19, 0.04);
+  border: 1px solid rgba(139, 69, 19, 0.1);
+  border-radius: 10px;
+  padding: 0.55rem 0.8rem;
+  cursor: pointer;
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.option:hover {
+  border-color: rgba(139, 69, 19, 0.35);
+}
+
+.option.active {
+  border-color: #FFD700;
+  background: rgba(255, 215, 0, 0.1);
+  box-shadow: 0 0 0 1px rgba(218, 165, 32, 0.4);
+}
+
+.optionSample {
+  font-size: 1.1rem;
+  color: #2c1810;
+  line-height: 1.4;
+}
+
+.optionLabel {
+  font-size: 0.72rem;
+  color: #8B4513;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+}
+
+.hint {
+  margin: 0.7rem 0 0;
+  font-size: 0.72rem;
+  color: #5C2E0F;
+  opacity: 0.75;
+  text-align: center;
+}
+
+@media (max-width: 480px) {
+  .wrapper {
+    bottom: 20px;
+    left: 20px;
+  }
+
+  .toggle {
+    width: 46px;
+    height: 46px;
+    font-size: 0.95rem;
+  }
+
+  .panel {
+    width: 250px;
+  }
+}
