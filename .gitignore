@@ -18,7 +18,7 @@ yarn-error.log*
 # Junk / build artifacts
 test-results/
 playwright-report/
-*.png
+
 
 images/animals/elephant_files/*
 !images/animals/elephant_files/*.png
