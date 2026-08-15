@@ -1,5 +1,6 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import styles from './GuestPlanner.module.css';
+import MovingParticles from './MovingParticles';
 
 interface GuestPlannerProps {
   language: 'en' | 'bn';
@@ -105,6 +106,19 @@ export default function GuestPlanner({ language }: GuestPlannerProps) {
 
   return (
     <section id="game" className={styles.guestPlanner}>
+      {/* Floating gun emojis in the fun zone section */}
+      <MovingParticles
+        type="gun"
+        count={25}
+        opacityMin={0.05}
+        opacityMax={0.12}
+        sizeMin={16}
+        sizeMax={28}
+        durationMin={12}
+        durationMax={26}
+        className={styles.particles}
+        zIndex={1}
+      />
       <div className={styles.container}>
         <div className={styles.header}>
           <h2>{language === 'en' ? 'Kids Fun Corner' : 'শিশুদের আনন্দ কোণা'}</h2>

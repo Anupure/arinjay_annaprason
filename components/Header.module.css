@@ -9,6 +9,17 @@
   border-bottom: 2px solid rgba(255, 215, 0, 0.2);
 }
 
+/* Container for floating star particles in the nav bar */
+.navParticles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
 .container {
   max-width: 1200px;
   margin: 0 auto;

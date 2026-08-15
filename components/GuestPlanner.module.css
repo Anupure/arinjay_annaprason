@@ -1,6 +1,19 @@
 .guestPlanner {
   padding: 4rem 20px;
   background: linear-gradient(180deg, #FFE8D6 0%, #FFF8F3 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Container for floating gun emojis */
+.particles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  pointer-events: none;
 }
 
 .container {

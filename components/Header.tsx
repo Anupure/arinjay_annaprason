@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import styles from './Header.module.css';
+import MovingParticles from './MovingParticles';
 
 interface HeaderProps {
   language: 'en' | 'bn';
@@ -22,6 +23,19 @@ export default function Header({ language, onLanguageChange }: HeaderProps) {
 
   return (
     <header className={styles.header}>
+      {/* Floating stars in the navigation bar */}
+      <MovingParticles
+        type="star"
+        count={25}
+        opacityMin={0.1}
+        opacityMax={0.25}
+        sizeMin={10}
+        sizeMax={20}
+        durationMin={12}
+        durationMax={28}
+        className={styles.navParticles}
+        zIndex={1}
+      />
       <div className={styles.container}>
         <div className={styles.logo}>
           <h1>অরিঞ্জয়</h1>

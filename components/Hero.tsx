@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './Hero.module.css';
+import MovingParticles from './MovingParticles';
 
 interface HeroProps {
   language: 'en' | 'bn';
@@ -21,6 +22,19 @@ export default function Hero({ language }: HeroProps) {
         <div className={styles.gradientOverlay}></div>
         <div className={styles.decorativeElement1}></div>
         <div className={styles.decorativeElement2}></div>
+        {/* Transparent floating hearts in the hero section */}
+        <MovingParticles
+          type="heart"
+          count={40}
+          opacityMin={0.05}
+          opacityMax={0.12}
+          sizeMin={16}
+          sizeMax={32}
+          durationMin={10}
+          durationMax={25}
+          className={styles.particles}
+          zIndex={1}
+        />
       </div>
 
       <div className={styles.container}>

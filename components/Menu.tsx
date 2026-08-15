@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Image, { StaticImageData } from 'next/image';
 import { menuItems } from '../data/menuItems';
 import styles from './Menu.module.css';
+import MovingParticles from './MovingParticles';
 
 import imgWater from '../images/menu/water_bottle.png';
 import imgSalad from '../images/menu/salad.jpg';
@@ -76,6 +77,19 @@ export default function Menu({ language }: MenuProps) {
 
   return (
     <section id="menu" className={styles.menu}>
+      {/* Floating food-related emojis in the menu section */}
+      <MovingParticles
+        type="food"
+        count={35}
+        opacityMin={0.05}
+        opacityMax={0.12}
+        sizeMin={18}
+        sizeMax={34}
+        durationMin={12}
+        durationMax={28}
+        className={styles.particles}
+        zIndex={1}
+      />
       <div className={styles.container}>
         <div className={styles.header}>
           <h2>{language === 'en' ? 'Our Menu' : 'আমাদের মেনু'}</h2>

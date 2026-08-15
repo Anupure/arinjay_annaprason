@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './FamilyTree.module.css';
+import MovingParticles from './MovingParticles';
 // Import family member images (if available)
 import momImg from '../images/family/mom.jpg';
 import paternalUncleImg from '../images/family/paternal_uncle.jpg';
@@ -247,6 +248,19 @@ export default function FamilyTree({ language }: FamilyTreeProps) {
   return (
     
     <section id="family" className={styles.familyTree} aria-labelledby="family-tree-title">
+      {/* Floating tree emojis in the family tree section */}
+      <MovingParticles
+        type="tree"
+        count={30}
+        opacityMin={0.06}
+        opacityMax={0.15}
+        sizeMin={16}
+        sizeMax={30}
+        durationMin={10}
+        durationMax={24}
+        className={styles.particles}
+        zIndex={1}
+      />
       <div className={styles.container}>
         <div className={styles.header}>
           <h2 id="family-tree-title">

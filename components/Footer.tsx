@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './Footer.module.css';
+import MovingParticles from './MovingParticles';
 
 interface FooterProps {
   language: 'en' | 'bn';
@@ -10,6 +11,19 @@ export default function Footer({ language }: FooterProps) {
 
   return (
     <footer className={styles.footer}>
+      {/* Floating sparkles in the footer */}
+      <MovingParticles
+        type="sparkle"
+        count={20}
+        opacityMin={0.05}
+        opacityMax={0.12}
+        sizeMin={10}
+        sizeMax={20}
+        durationMin={14}
+        durationMax={30}
+        className={styles.particles}
+        zIndex={1}
+      />
       <div className={styles.container}>
         <div className={styles.content}>
           <div className={styles.section}>
