@@ -1,5 +1,37 @@
 import React from 'react';
 import styles from './FamilyTree.module.css';
+// Import family member images (if available)
+import momImg from '../images/family/mom.png';
+import paternalUncleImg from '../images/family/paternal_uncle.jpg';
+import maternalUncleImg from '../images/family/maternal_uncle.png';
+import paternalGrandfatherImg from '../images/family/paternal_grandfather.jpg';
+import paternalGrandmotherImg from '../images/family/paternal_grandmother.jpg';
+import maternalGrandfatherImg from '../images/family/maternal_grandfather.jpg';
+import maternalGrandmotherImg from '../images/family/maternal_grandmother.jpg';
+import paternalGreatGrandfatherImg from '../images/family/paternal_great_grandfather.jpg';
+import babyImg from '../images/family/me.png';
+import { StaticImageData } from 'next/image';
+
+// Map member IDs to their corresponding image imports (use actual IDs from the members array)
+const imageMap: Record<string, StaticImageData> = {
+  // Mother
+  mamma: momImg,
+  // Uncles
+  kakumani: paternalUncleImg,
+  mamaya: maternalUncleImg,
+  // Grandparents (actual IDs)
+  dadai: paternalGrandfatherImg,
+  // Paternal Grandmother
+  thamma: paternalGrandmotherImg,
+  // Maternal Grandfather
+  dadun: maternalGrandfatherImg,
+  // Maternal Grandmother
+  dimma: maternalGrandmotherImg,
+  // Paternal Great Grandfather
+  bobaba: paternalGreatGrandfatherImg,
+  // Baby
+  arinjay: babyImg,
+};
 
 interface FamilyMember {
   id: string;
@@ -162,15 +194,22 @@ export default function FamilyTree({ language }: FamilyTreeProps) {
   const paternal = members.filter(m => m.side === 'paternal');
   const maternal = members.filter(m => m.side === 'maternal');
 
-  const renderMember = (member: FamilyMember) => (
-    <div key={member.id} className={`${styles.memberCard} ${member.side === 'maternal' ? styles.maternalCard : styles.paternalCard}`}>
-      <div className={styles.avatar}>
-        <span className={styles.avatarEmoji}>{member.emoji}</span>
+  const renderMember = (member: FamilyMember) => {
+    const imgData = imageMap[member.id];
+    return (
+      <div key={member.id} className={`${styles.memberCard} ${member.side === 'maternal' ? styles.maternalCard : styles.paternalCard}`}>
+        <div className={styles.avatar}>
+          {imgData ? (
+            <img src={imgData.src} alt={member.nameEn} className={styles.avatarImg} />
+          ) : (
+            <span className={styles.avatarEmoji}>{member.emoji}</span>
+          )}
+        </div>
+        <span className={styles.relation}>{language === 'en' ? member.relationEn : member.relationBn}</span>
+        <span className={styles.name}>{language === 'en' ? member.nameEn : member.nameBn}</span>
       </div>
-      <span className={styles.relation}>{language === 'en' ? member.relationEn : member.relationBn}</span>
-      <span className={styles.name}>{language === 'en' ? member.nameEn : member.nameBn}</span>
-    </div>
-  );
+    );
+  };
 
   const genLabel = (gen: number) => {
     switch (gen) {
@@ -179,13 +218,13 @@ export default function FamilyTree({ language }: FamilyTreeProps) {
       case 2:
         return language === 'en' ? 'Grandparents' : 'দাদা-ঠাম্মা / দাদু-দিম্মা';
       case 1:
-        return language === 'en' ? 'Parents & Uncles' : 'বাবা-মা ও চাচা-মামা';
+        return language === 'en' ? 'Parents & Uncles' : 'বাবা-মা ও কাকা-মামা';
       default:
         return '';
     }
   };
-
   return (
+    
     <section id="family" className={styles.familyTree} aria-labelledby="family-tree-title">
       <div className={styles.container}>
         <div className={styles.header}>
@@ -206,8 +245,8 @@ export default function FamilyTree({ language }: FamilyTreeProps) {
               {gen === 0 ? (
                 <div className={styles.babyRow}>
                   <div className={`${styles.memberCard} ${styles.babyCard}`}>
-                    <div className={`${styles.avatar} ${styles.babyAvatar}`}>
-                      <span className={styles.avatarEmoji}>{baby.emoji}</span>
+                    <div className={styles.avatar}>
+                        <img src={babyImg.src} alt={baby.nameEn} className={styles.avatarImg} />
                     </div>
                     <span className={styles.relation}>
                       {language === 'en' ? baby.relationEn : baby.relationBn}
