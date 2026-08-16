@@ -1,0 +1,231 @@
+<svg width="800" height="800" viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="800" fill="transparent"/>
+  
+  <!-- Central lotus -->
+  <circle cx="400" cy="400" r="12" fill="#DAA520"/>
+  <circle cx="400" cy="400" r="6" fill="#B89B5E"/>
+  
+  <!-- Inner lotus petals (8) -->
+  <g stroke="#DAA520" stroke-width="1.5" fill="none">
+    <path d="M400 394 C410 394 418 402 418 412 C418 422 410 430 400 430 C390 430 382 422 382 412 C382 402 390 394 400 394 Z"/>
+  </g>
+  <g stroke="#DAA520" stroke-width="1.5" fill="none" transform="rotate(22.5 400 400)">
+    <path d="M400 394 C410 394 418 402 418 412 C418 422 410 430 400 430 C390 430 382 422 382 412 C382 402 390 394 400 394 Z"/>
+  </g>
+  <g stroke="#DAA520" stroke-width="1.5" fill="none" transform="rotate(45 400 400)">
+    <path d="M400 394 C410 394 418 402 418 412 C418 422 410 430 400 430 C390 430 382 422 382 412 C382 402 390 394 400 394 Z"/>
+  </g>
+  <g stroke="#DAA520" stroke-width="1.5" fill="none" transform="rotate(67.5 400 400)">
+    <path d="M400 394 C410 394 418 402 418 412 C418 422 410 430 400 430 C390 430 382 422 382 412 C382 402 390 394 400 394 Z"/>
+  </g>
+  <g stroke="#DAA520" stroke-width="1.5" fill="none" transform="rotate(90 400 400)">
+    <path d="M400 394 C410 394 418 402 418 412 C418 422 410 430 400 430 C390 430 382 422 382 412 C382 402 390 394 400 394 Z"/>
+  </g>
+  <g stroke="#DAA520" stroke-width="1.5" fill="none" transform="rotate(112.5 400 400)">
+    <path d="M400 394 C410 394 418 402 418 412 C418 422 410 430 400 430 C390 430 382 422 382 412 C382 402 390 394 400 394 Z"/>
+  </g>
+  <g stroke="#DAA520" stroke-width="1.5" fill="none" transform="rotate(135 400 400)">
+    <path d="M400 394 C410 394 418 402 418 412 C418 422 410 430 400 430 C390 430 382 422 382 412 C382 402 390 394 400 394 Z"/>
+  </g>
+  <g stroke="#DAA520" stroke-width="1.5" fill="none" transform="rotate(157.5 400 400)">
+    <path d="M400 394 C410 394 418 402 418 412 C418 422 410 430 400 430 C390 430 382 422 382 412 C382 402 390 394 400 394 Z"/>
+  </g>
+  
+  <!-- First ring of lotus petals (16) -->
+  <g stroke="#DAA520" stroke-width="1.2" fill="none">
+    <path d="M400 388 C406 388 412 394 412 400 C412 406 406 412 400 412 C394 412 388 406 388 400 C388 394 394 388 400 388 Z"/>
+  </g>
+  <g stroke="#DAA520" stroke-width="1.2" fill="none" transform="rotate(11.25 400 400)">
+    <path d="M400 388 C406 388 412 394 412 400 C412 406 406 412 400 412 C394 412 388 406 388 400 C388 394 394 388 400 388 Z"/>
+  </g>
+  <g stroke="#DAA520" stroke-width="1.2" fill="none" transform="rotate(22.5 400 400)">
+    <path d="M400 388 C406 388 412 394 412 400 C412 406 406 412 400 412 C394 412 388 406 388 400 C388 394 394 388 400 388 Z"/>
+  </g>
+  <g stroke="#DAA520" stroke-width="1.2" fill="none" transform="rotate(33.75 400 400)">
+    <path d="M400 388 C406 388 412 394 412 400 C412 406 406 412 400 412 C394 412 388 406 388 400 C388 394 394 388 400 388 Z"/>
+  </g>
+  <g stroke="#DAA520" stroke-width="1.2" fill="none" transform="rotate(45 400 400)">
+    <path d="M400 388 C406 388 412 394 412 400 C412 406 406 412 400 412 C394 412 388 406 388 400 C388 394 394 388 400 388 Z"/>
+  </g>
+  <g stroke="#DAA520" stroke-width="1.2" fill="none" transform="rotate(56.25 400 400)">
+    <path d="M400 388 C406 388 412 394 412 400 C412 406 406 412 400 412 C394 412 388 406 388 400 C388 394 394 388 400 388 Z"/>
+  </g>
+  <g stroke="#DAA520" stroke-width="1.2" fill="none" transform="rotate(67.5 400 400)">
+    <path d="M400 388 C406 388 412 394 412 400 C412 406 406 412 400 412 C394 412 388 406 388 400 C388 394 394 388 400 388 Z"/>
+  </g>
+  <g stroke="#DAA520" stroke-width="1.2" fill="none" transform="rotate(78.75 400 400)">
+    <path d="M400 388 C406 388 412 394 412 400 C412 406 406 412 400 412 C394 412 388 406 388 400 C388 394 394 388 400 388 Z"/>
+  </g>
+  <g stroke="#DAA520" stroke-width="1.2" fill="none" transform="rotate(90 400 400)">
+    <path d="M400 388 C406 388 412 394 412 400 C412 406 406 412 400 412 C394 412 388 406 388 400 C388 394 394 388 400 388 Z"/>
+  </g>
+  <g stroke="#DAA520" stroke-width="1.2" fill="none" transform="rotate(101.25 400 400)">
+    <path d="M400 388 C406 388 412 394 412 400 C412 406 406 412 400 412 C394 412 388 406 388 400 C388 394 394 388 400 388 Z"/>
+  </g>
+  <g stroke="#DAA520" stroke-width="1.2" fill="none" transform="rotate(112.5 400 400)">
+    <path d="M400 388 C406 388 412 394 412 400 C412 406 406 412 400 412 C394 412 388 406 388 400 C388 394 394 388 400 388 Z"/>
+  </g>
+  <g stroke="#DAA520" stroke-width="1.2" fill="none" transform="rotate(123.75 400 400)">
+    <path d="M400 388 C406 388 412 394 412 400 C412 406 406 412 400 412 C394 412 388 406 388 400 C388 394 394 388 400 388 Z"/>
+  </g>
+  <g stroke="#DAA520" stroke-width="1.2" fill="none" transform="rotate(135 400 400)">
+    <path d="M400 388 C406 388 412 394 412 400 C412 406 406 412 400 412 C394 412 388 406 388 400 C388 394 394 388 400 388 Z"/>
+  </g>
+  <g stroke="#DAA520" stroke-width="1.2" fill="none" transform="rotate(146.25 400 400)">
+    <path d="M400 388 C406 388 412 394 412 400 C412 406 406 412 400 412 C394 412 388 406 388 400 C388 394 394 388 400 388 Z"/>
+  </g>
+  <g stroke="#DAA520" stroke-width="1.2" fill="none" transform="rotate(157.5 400 400)">
+    <path d="M400 388 C406 388 412 394 412 400 C412 406 406 412 400 412 C394 412 388 406 388 400 C388 394 394 388 400 388 Z"/>
+  </g>
+  <g stroke="#DAA520" stroke-width="1.2" fill="none" transform="rotate(168.75 400 400)">
+    <path d="M400 388 C406 388 412 394 412 400 C412 406 406 412 400 412 C394 412 388 406 388 400 C388 394 394 388 400 388 Z"/>
+  </g>
+  
+  <!-- Outer ring connecting lines -->
+  <g stroke="#B89B5E" stroke-width="1" fill="none">
+    <circle cx="400" cy="400" r="120" />
+    <circle cx="400" cy="400" r="180" />
+    <circle cx="400" cy="400" r="240" />
+    <circle cx="400" cy="400" r="300" />
+  </g>
+  
+  <!-- Radial lines (16) -->
+  <g stroke="#B89B5E" stroke-width="1" fill="none">
+    <line x1="400" y1="100" x2="400" y2="700" transform="rotate(0 400 400)"/>
+    <line x1="400" y1="100" x2="400" y2="700" transform="rotate(11.25 400 400)"/>
+    <line x1="400" y1="100" x2="400" y2="700" transform="rotate(22.5 400 400)"/>
+    <line x1="400" y1="100" x2="400" y2="700" transform="rotate(33.75 400 400)"/>
+    <line x1="400" y1="100" x2="400" y2="700" transform="rotate(45 400 400)"/>
+    <line x1="400" y1="100" x2="400" y2="700" transform="rotate(56.25 400 400)"/>
+    <line x1="400" y1="100" x2="400" y2="700" transform="rotate(67.5 400 400)"/>
+    <line x1="400" y1="100" x2="400" y2="700" transform="rotate(78.75 400 400)"/>
+    <line x1="400" y1="100" x2="400" y2="700" transform="rotate(90 400 400)"/>
+    <line x1="400" y1="100" x2="400" y2="700" transform="rotate(101.25 400 400)"/>
+    <line x1="400" y1="100" x2="400" y2="700" transform="rotate(112.5 400 400)"/>
+    <line x1="400" y1="100" x2="400" y2="700" transform="rotate(123.75 400 400)"/>
+    <line x1="400" y1="100" x2="400" y2="700" transform="rotate(135 400 400)"/>
+    <line x1="400" y1="100" x2="400" y2="700" transform="rotate(146.25 400 400)"/>
+    <line x1="400" y1="100" x2="400" y2="700" transform="rotate(157.5 400 400)"/>
+    <line x1="400" y1="100" x2="400" y2="700" transform="rotate(168.75 400 400)"/>
+  </g>
+  
+  <!-- Outer lotus petals (32) -->
+  <g stroke="#DAA520" stroke-width="1" fill="none">
+    <path d="M400 100 C415 100 428 112 428 128 C428 144 415 156 400 156 C385 156 372 144 372 128 C372 112 385 100 400 100 Z"/>
+  </g>
+  <g stroke="#DAA520" stroke-width="1" fill="none" transform="rotate(5.625 400 400)">
+    <path d="M400 100 C415 100 428 112 428 128 C428 144 415 156 400 156 C385 156 372 144 372 128 C372 112 385 100 400 100 Z"/>
+  </g>
+  <g stroke="#DAA520" stroke-width="1" fill="none" transform="rotate(11.25 400 400)">
+    <path d="M400 100 C415 100 428 112 428 128 C428 144 415 156 400 156 C385 156 372 144 372 128 C372 112 385 100 400 100 Z"/>
+  </g>
+  <g stroke="#DAA520" stroke-width="1" fill="none" transform="rotate(16.875 400 400)">
+    <path d="M400 100 C415 100 428 112 428 128 C428 144 415 156 400 156 C385 156 372 144 372 128 C372 112 385 100 400 100 Z"/>
+  </g>
+  <g stroke="#DAA520" stroke-width="1" fill="none" transform="rotate(22.5 400 400)">
+    <path d="M400 100 C415 100 428 112 428 128 C428 144 415 156 400 156 C385 156 372 144 372 128 C372 112 385 100 400 100 Z"/>
+  </g>
+  <g stroke="#DAA520" stroke-width="1" fill="none" transform="rotate(28.125 400 400)">
+    <path d="M400 100 C415 100 428 112 428 128 C428 144 415 156 400 156 C385 156 372 144 372 128 C372 112 385 100 400 100 Z"/>
+  </g>
+  <g stroke="#DAA520" stroke-width="1" fill="none" transform="rotate(33.75 400 400)">
+    <path d="M400 100 C415 100 428 112 428 128 C428 144 415 156 400 156 C385 156 372 144 372 128 C372 112 385 100 400 100 Z"/>
+  </g>
+  <g stroke="#DAA520" stroke-width="1" fill="none" transform="rotate(39.375 400 400)">
+    <path d="M400 100 C415 100 428 112 428 128 C428 144 415 156 400 156 C385 156 372 144 372 128 C372 112 385 100 400 100 Z"/>
+  </g>
+  <g stroke="#DAA520" stroke-width="1" fill="none" transform="rotate(45 400 400)">
+    <path d="M400 100 C415 100 428 112 428 128 C428 144 415 156 400 156 C385 156 372 144 372 128 C372 112 385 100 400 100 Z"/>
+  </g>
+  <g stroke="#DAA520" stroke-width="1" fill="none" transform="rotate(50.625 400 400)">
+    <path d="M400 100 C415 100 428 112 428 128 C428 144 415 156 400 156 C385 156 372 144 372 128 C372 112 385 100 400 100 Z"/>
+  </g>
+  <g stroke="#DAA520" stroke-width="1" fill="none" transform="rotate(56.25 400 400)">
+    <path d="M400 100 C415 100 428 112 428 128 C428 144 415 156 400 156 C385 156 372 144 372 128 C372 112 385 100 400 100 Z"/>
+  </g>
+  <g stroke="#DAA520" stroke-width="1" fill="none" transform="rotate(61.875 400 400)">
+    <path d="M400 100 C415 100 428 112 428 128 C428 144 415 156 400 156 C385 156 372 144 372 128 C372 112 385 100 400 100 Z"/>
+  </g>
+  <g stroke="#DAA520" stroke-width="1" fill="none" transform="rotate(67.5 400 400)">
+    <path d="M400 100 C415 100 428 112 428 128 C428 144 415 156 400 156 C385 156 372 144 372 128 C372 112 385 100 400 100 Z"/>
+  </g>
+  <g stroke="#DAA520" stroke-width="1" fill="none" transform="rotate(73.125 400 400)">
+    <path d="M400 100 C415 100 428 112 428 128 C428 144 415 156 400 156 C385 156 372 144 372 128 C372 112 385 100 400 100 Z"/>
+  </g>
+  <g stroke="#DAA520" stroke-width="1" fill="none" transform="rotate(78.75 400 400)">
+    <path d="M400 100 C415 100 428 112 428 128 C428 144 415 156 400 156 C385 156 372 144 372 128 C372 112 385 100 400 100 Z"/>
+  </g>
+  <g stroke="#DAA520" stroke-width="1" fill="none" transform="rotate(84.375 400 400)">
+    <path d="M400 100 C415 100 428 112 428 128 C428 144 415 156 400 156 C385 156 372 144 372 128 C372 112 385 100 400 100 Z"/>
+  </g>
+  <g stroke="#DAA520" stroke-width="1" fill="none" transform="rotate(90 400 400)">
+    <path d="M400 100 C415 100 428 112 428 128 C428 144 415 156 400 156 C385 156 372 144 372 128 C372 112 385 100 400 100 Z"/>
+  </g>
+  <g stroke="#DAA520" stroke-width="1" fill="none" transform="rotate(95.625 400 400)">
+    <path d="M400 100 C415 100 428 112 428 128 C428 144 415 156 400 156 C385 156 372 144 372 128 C372 112 385 100 400 100 Z"/>
+  </g>
+  <g stroke="#DAA520" stroke-width="1" fill="none" transform="rotate(101.25 400 400)">
+    <path d="M400 100 C415 100 428 112 428 128 C428 144 415 156 400 156 C385 156 372 144 372 128 C372 112 385 100 400 100 Z"/>
+  </g>
+  <g stroke="#DAA520" stroke-width="1" fill="none" transform="rotate(106.875 400 400)">
+    <path d="M400 100 C415 100 428 112 428 128 C428 144 415 156 400 156 C385 156 372 144 372 128 C372 112 385 100 400 100 Z"/>
+  </g>
+  <g stroke="#DAA520" stroke-width="1" fill="none" transform="rotate(112.5 400 400)">
+    <path d="M400 100 C415 100 428 112 428 128 C428 144 415 156 400 156 C385 156 372 144 372 128 C372 112 385 100 400 100 Z"/>
+  </g>
+  <g stroke="#DAA520" stroke-width="1" fill="none" transform="rotate(118.125 400 400)">
+    <path d="M400 100 C415 100 428 112 428 128 C428 144 415 156 400 156 C385 156 372 144 372 128 C372 112 385 100 400 100 Z"/>
+  </g>
+  <g stroke="#DAA520" stroke-width="1" fill="none" transform="rotate(123.75 400 400)">
+    <path d="M400 100 C415 100 428 112 428 128 C428 144 415 156 400 156 C385 156 372 144 372 128 C372 112 385 100 400 100 Z"/>
+  </g>
+  <g stroke="#DAA520" stroke-width="1" fill="none" transform="rotate(129.375 400 400)">
+    <path d="M400 100 C415 100 428 112 428 128 C428 144 415 156 400 156 C385 156 372 144 372 128 C372 112 385 100 400 100 Z"/>
+  </g>
+  <g stroke="#DAA520" stroke-width="1" fill="none" transform="rotate(135 400 400)">
+    <path d="M400 100 C415 100 428 112 428 128 C428 144 415 156 400 156 C385 156 372 144 372 128 C372 112 385 100 400 100 Z"/>
+  </g>
+  <g stroke="#DAA520" stroke-width="1" fill="none" transform="rotate(140.625 400 400)">
+    <path d="M400 100 C415 100 428 112 428 128 C428 144 415 156 400 156 C385 156 372 144 372 128 C372 112 385 100 400 100 Z"/>
+  </g>
+  <g stroke="#DAA520" stroke-width="1" fill="none" transform="rotate(146.25 400 400)">
+    <path d="M400 100 C415 100 428 112 428 128 C428 144 415 156 400 156 C385 156 372 144 372 128 C372 112 385 100 400 100 Z"/>
+  </g>
+  <g stroke="#DAA520" stroke-width="1" fill="none" transform="rotate(151.875 400 400)">
+    <path d="M400 100 C415 100 428 112 428 128 C428 144 415 156 400 156 C385 156 372 144 372 128 C372 112 385 100 400 100 Z"/>
+  </g>
+  <g stroke="#DAA520" stroke-width="1" fill="none" transform="rotate(157.5 400 400)">
+    <path d="M400 100 C415 100 428 112 428 128 C428 144 415 156 400 156 C385 156 372 144 372 128 C372 112 385 100 400 100 Z"/>
+  </g>
+  <g stroke="#DAA520" stroke-width="1" fill="none" transform="rotate(163.125 400 400)">
+    <path d="M400 100 C415 100 428 112 428 128 C428 144 415 156 400 156 C385 156 372 144 372 128 C372 112 385 100 400 100 Z"/>
+  </g>
+  <g stroke="#DAA520" stroke-width="1" fill="none" transform="rotate(168.75 400 400)">
+    <path d="M400 100 C415 100 428 112 428 128 C428 144 415 156 400 156 C385 156 372 144 372 128 C372 112 385 100 400 100 Z"/>
+  </g>
+  <g stroke="#DAA520" stroke-width="1" fill="none" transform="rotate(174.375 400 400)">
+    <path d="M400 100 C415 100 428 112 428 128 C428 144 415 156 400 156 C385 156 372 144 372 128 C372 112 385 100 400 100 Z"/>
+  </g>
+  
+  <!-- Outer ring -->
+  <g stroke="#B89B5E" stroke-width="1.5" fill="none">
+    <circle cx="400" cy="400" r="360" />
+  </g>
+  
+  <!-- Outer edge dots (32) -->
+  <g fill="#DAA520">
+    <circle cx="400" cy="40" r="3"/>
+    <circle cx="400" cy="760" r="3"/>
+    <circle cx="40" cy="400" r="3"/>
+    <circle cx="760" cy="400" r="3"/>
+  </g>
+  
+  <!-- Corner lotus -->
+  <g stroke="#DAA520" stroke-width="1" fill="none">
+    <path d="M100 100 C110 100 120 110 120 120 C120 130 110 140 100 140 C90 140 80 130 80 120 C80 110 90 100 100 100 Z"/>
+    <path d="M700 100 C710 100 720 110 720 120 C720 130 710 140 700 140 C690 140 680 130 680 120 C680 110 690 100 700 100 Z"/>
+    <path d="M100 700 C110 700 120 710 120 720 C120 730 110 740 100 740 C90 740 80 730 80 720 C80 710 90 700 100 700 Z"/>
+    <path d="M700 700 C710 700 720 710 720 720 C720 730 710 740 700 740 C690 740 680 730 680 720 C680 710 690 700 700 700 Z"/>
+  </g>
+</svg>

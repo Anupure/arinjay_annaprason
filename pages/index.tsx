@@ -6,7 +6,7 @@ import Menu from '../components/Menu';
 import FamilyTree from '../components/FamilyTree';
 import GuestPlanner from '../components/GuestPlanner';
 import Footer from '../components/Footer';
-import IntroSequence from '../components/IntroSequence';
+import IntroSequence3D from '../components/IntroSequence3D';
 import WanderingAnimals from '../components/WanderingAnimals';
 import FontSelector from '../components/FontSelector';
 
@@ -52,7 +52,7 @@ export default function Home() {
         {language === 'en' ? 'Skip to content' : 'বিষয়বস্তুর দিকে ছাড়ুন'}
       </a>
 
-      <IntroSequence onComplete={() => setIntroComplete(true)} />
+      <IntroSequence3D onComplete={() => setIntroComplete(true)} />
 
       <div className={`site-shell ${introComplete ? 'ready' : ''}`}>
         <Header language={language} onLanguageChange={handleLanguageChange} />
