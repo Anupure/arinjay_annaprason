@@ -108,6 +108,81 @@
 }
 
 /* --------------------------------------------------------------
+   Sound permission prompt
+-------------------------------------------------------------- */
+
+/* Full-screen click layer — tap anywhere to enable music */
+.soundLayer {
+  position: absolute;
+  inset: 0;
+
+  /* Override the wrapper's pointer-events:none so clicks register */
+  pointer-events: auto;
+
+  cursor: pointer;
+}
+
+.soundPromptWrap {
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 10px 22px;
+
+  border: 2px solid rgba(218, 165, 32, 0.6);
+  border-radius: 999px;
+
+  background: rgba(255, 248, 243, 0.92);
+
+  color: #6b3a2a;
+
+  font-family: inherit;
+  font-size: 0.95rem;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 4px 16px rgba(107, 58, 42, 0.18),
+    0 0 0 4px rgba(255, 248, 243, 0.5);
+
+  pointer-events: auto;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.soundPromptWrap:hover {
+  transform: translateX(-50%) translateY(-2px);
+  box-shadow:
+    0 6px 22px rgba(107, 58, 42, 0.25),
+    0 0 0 4px rgba(255, 248, 243, 0.7);
+}
+
+.soundIcon {
+  font-size: 1.2rem;
+}
+
+.soundText {
+  white-space: nowrap;
+}
+
+@media (max-width: 600px) {
+  .soundPromptWrap {
+    bottom: 16px;
+    padding: 8px 16px;
+    font-size: 0.85rem;
+  }
+}
+
+/* --------------------------------------------------------------
    Reduced motion
 -------------------------------------------------------------- */
 

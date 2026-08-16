@@ -530,14 +530,52 @@ function IntroScene() {
 /* ──────────────────────────────────────────────
    Main component
    ────────────────────────────────────────────── */
+
+// Module-level audio singleton: persists across mounts/unmounts,
+// and ensures the sitar plays exactly once per page load.
+let sitarAudio: HTMLAudioElement | null = null;
+let sitarStarted = false;
+
+function getSitarAudio(): HTMLAudioElement {
+  if (!sitarAudio) {
+    sitarAudio = new Audio('/music/sitar.mp3');
+    sitarAudio.preload = 'auto';
+    sitarAudio.loop = false;
+    sitarAudio.volume = 0.7;
+  }
+  return sitarAudio;
+}
+
+function playSitarMusic() {
+  if (sitarStarted) return;
+  const audio = getSitarAudio();
+  audio.play()
+    .then(() => {
+      sitarStarted = true;
+      console.log('Sitar music playing');
+    })
+    .catch((err) => {
+      console.warn('Failed to play sitar music:', err);
+    });
+}
+
 export default function IntroSequence3D({ onComplete }: IntroSequence3DProps) {
   const rootRef = useRef<HTMLDivElement>(null);
   const canvasRef = useRef<HTMLDivElement>(null);
   const [showCanvas, setShowCanvas] = useState(false);
   const [visible, setVisible] = useState(true);
+  const [soundOn, setSoundOn] = useState(false);
+  const [soundAllowed, setSoundAllowed] = useState(false);
 
   const onCompleteRef = useRef(onComplete);
   onCompleteRef.current = onComplete;
+
+  // Handle enabling sound (called from the button click = user gesture)
+  const handleEnableSound = () => {
+    playSitarMusic();
+    setSoundOn(true);
+    setSoundAllowed(true);
+  };
 
   useLayoutEffect(() => {
     // Delay canvas mount for smooth fade-in
@@ -547,6 +585,7 @@ export default function IntroSequence3D({ onComplete }: IntroSequence3DProps) {
       const tl = gsap.timeline({
         defaults: { ease: 'power2.out' },
         onComplete: () => {
+          // NOTE: Music continues playing — do NOT pause it.
           // Hide the intro from DOM after fade-out completes
           setVisible(false);
           onCompleteRef.current?.();
@@ -571,6 +610,7 @@ export default function IntroSequence3D({ onComplete }: IntroSequence3DProps) {
 
     return () => {
       clearTimeout(showTimer);
+      // NOTE: Do NOT pause audio here — let it finish naturally.
       ctx.revert();
     };
   }, []);
@@ -593,6 +633,27 @@ export default function IntroSequence3D({ onComplete }: IntroSequence3DProps) {
             <IntroScene />
           </Canvas>
         </div>
+      )}
+
+      {/* Full-screen click layer — tap anywhere to enable music.
+          Only active while sound hasn't been enabled yet. */}
+      {!soundAllowed && (
+        <>
+          <div
+            className={styles.soundLayer}
+            onClick={handleEnableSound}
+            role="button"
+            aria-label="Tap anywhere to play music"
+          />
+
+          {/* Permission prompt — asks user to enable sitar music */}
+          <div className={styles.soundPromptWrap} onClick={handleEnableSound}>
+            <span className={styles.soundIcon}>🔊</span>
+            <span className={styles.soundText}>
+              {soundOn ? 'Music playing' : 'Tap to play music'}
+            </span>
+          </div>
+        </>
       )}
 
       {/* Overlay HTML title for guaranteed Bengali rendering */}

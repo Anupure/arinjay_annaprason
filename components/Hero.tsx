@@ -7,7 +7,7 @@ interface HeroProps {
 }
 
 export default function Hero({ language }: HeroProps) {
-  const title = language === 'en' ? "Arinjay's Annaprashon" : 'অরিঞ্জয়ের অন্নপ্রাশন';
+  const title = language === 'en' ? "Arinjay's Happy Rice Ceremony" : 'অরিঞ্জয়ের শুভ অন্নপ্রাশন';
   const subtitle = language === 'en'
     ? 'A celebration of first rice ceremony with love and traditions'
     : 'প্রথম মুখে ভাতের আনন্দময় দিবস';
