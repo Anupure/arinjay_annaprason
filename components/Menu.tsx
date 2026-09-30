@@ -40,6 +40,7 @@ const dishImages: Record<string, StaticImageData> = {
   'mixed-fruit-chutney': imgChutney,
   poromanno: imgPoromanno,
   'komola-bhog': imgKomola,
+  rosogolla: imgRosogolla,
   sondesh: imgSondesh,
   'baked-rosogolla': imgRosogolla,
   'ice-cream': imgIceCream,
