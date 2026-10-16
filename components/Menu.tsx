@@ -18,9 +18,9 @@ import imgIlish from '../images/menu/Ilish_Bhapa.webp';
 import imgMutton from '../images/menu/mutton_kosha_and_katla_kalia.png';
 import imgChutney from '../images/menu/mango_chutney.jpg';
 import imgPoromanno from '../images/menu/poromanno.webp';
-import imgKomola from '../images/menu/komola_bhog.jpg';
+import imgRosogolla from '../images/menu/rosogolla.jpg';
 import imgSondesh from '../images/menu/sondesh.webp';
-import imgRosogolla from '../images/menu/baked_rosogolla.webp';
+import imgBakedRosogolla from '../images/menu/baked_rosogolla.webp';
 import imgIceCream from '../images/menu/ice-cream.jpg';
 import imgHajmola from '../images/menu/hajmola-candies.webp';
 
@@ -39,10 +39,9 @@ const dishImages: Record<string, StaticImageData> = {
   'mutton-fish': imgMutton,
   'mixed-fruit-chutney': imgChutney,
   poromanno: imgPoromanno,
-  'komola-bhog': imgKomola,
-  rosogolla: imgRosogolla,
+  'rosogolla': imgRosogolla,
   sondesh: imgSondesh,
-  'baked-rosogolla': imgRosogolla,
+  'baked-rosogolla': imgBakedRosogolla,
   'ice-cream': imgIceCream,
   hajmola: imgHajmola,
 };
@@ -143,26 +142,19 @@ export default function Menu({ language }: MenuProps) {
                 <span className={styles.categoryBadge}>{item.category}</span>
               </div>
 
-              <p className={styles.description}>{item.description}</p>
+              <p className={styles.description}>{language === 'en' ? item.description : item.bengaliDescription}</p>
 
               {selectedItem === item.id && (
                 <div className={`${styles.expandedContent} fade-in-up`}>
                   <div className={styles.infoRow}>
                     <strong>{language === 'en' ? 'Significance:' : 'গুরুত্ব:'}</strong>
-                    <p>{item.significance}</p>
+                    <p>{language === 'en' ? item.significance : item.bengaliSignificance}</p>
                   </div>
 
                   {item.preparedBy && (
                     <div className={styles.infoRow}>
                       <strong>{language === 'en' ? 'Prepared by:' : 'দ্বারা প্রস্তুত:'}</strong>
                       <p>{item.preparedBy}</p>
-                    </div>
-                  )}
-
-                  {item.servingTime && (
-                    <div className={styles.infoRow}>
-                      <strong>{language === 'en' ? 'Serving Time:' : 'পরিবেশনের সময়:'}</strong>
-                      <p>{item.servingTime}</p>
                     </div>
                   )}
                 </div>

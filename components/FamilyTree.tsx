@@ -3,12 +3,15 @@ import styles from './FamilyTree.module.css';
 import MovingParticles from './MovingParticles';
 // Import family member images (if available)
 import momImg from '../images/family/mom.jpg';
+import dadIMG from '../images/family/dadIMG.png';
 import paternalUncleImg from '../images/family/paternal_uncle.jpg';
 import maternalUncleImg from '../images/family/maternal_uncle.jpg';
 import paternalGrandfatherImg from '../images/family/paternal_grandfather.jpg';
 import paternalGrandmotherImg from '../images/family/paternal_grandmother.jpg';
 import maternalGrandfatherImg from '../images/family/maternal_grandfather.jpg';
 import maternalGrandmotherImg from '../images/family/maternal_grandmother.jpg';
+import maternalGreatGrandfatherImg from '../images/family/maternal_great_grandfather.jpg';
+import maternalGreatGrandmotherImg from '../images/family/maternal_great_grandmother.jpg';
 import paternalGreatGrandfatherImg from '../images/family/paternal_great_grandfather.jpg';
 import babyImg from '../images/family/me.jpg';
 import { StaticImageData } from 'next/image';
@@ -17,6 +20,8 @@ import { StaticImageData } from 'next/image';
 const imageMap: Record<string, StaticImageData> = {
   // Mother
   mamma: momImg,
+  // Father
+  papa: dadIMG,
   // Uncles
   kakumani: paternalUncleImg,
   mamaya: maternalUncleImg,
@@ -32,6 +37,10 @@ const imageMap: Record<string, StaticImageData> = {
   bobaba: paternalGreatGrandfatherImg,
   // Baby
   arinjay: babyImg,
+  // Maternal Great Grandfather
+  'bara-baba': maternalGreatGrandfatherImg,
+  // Maternal Great Grandmother
+  'bara-ma': maternalGreatGrandmotherImg,
 };
 
 interface FamilyMember {
